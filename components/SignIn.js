@@ -22,7 +22,6 @@ export default function SignIn() {
       if (res) {
         setLogin(true);
       } else {
-        setLogin(false);
         setDisabled(false);
       }
     });
