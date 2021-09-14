@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "EXAMSFORCAREERS",
+    "slug": "examsforcareers",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "splash": {
+      "backgroundColor": "#00b7ff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      },
+      "package":"com.examsforcareers.EXAMSFORCAREERS",
+      "versionCode":1
+    },
+    "web": {
+      "favicon": "./assets/logo_main.png"
+    }
+  }
+}
