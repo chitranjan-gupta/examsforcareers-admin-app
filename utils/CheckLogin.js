@@ -6,7 +6,7 @@ import {
 } from "expo-secure-store";
 import Domain from "./domain";
 
-export default async function CheckLogin(key, value, data) {
+export default async function CheckLogin(key, value, data, callback) {
   try {
     async function save(key, value) {
       return await setItemAsync(key, value);
@@ -65,6 +65,28 @@ export default async function CheckLogin(key, value, data) {
         });
         if (login.status === 200) {
           return true;
+        } else {
+          return false;
+        }
+      } else if (callback) {
+        if (!callback) {
+          return false;
+        }
+        const token = await getValueFor("adtoken");
+        if (!token) {
+          return false;
+        }
+        const login = await fetch(`${url}/api/admin/messages`, {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Cookie: `adtoken=${token}`,
+          },
+          credentials: "include",
+        });
+        if (login.status === 200) {
+          return await login.json();
         } else {
           return false;
         }

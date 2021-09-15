@@ -15,13 +15,14 @@ export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setLogin] = useState(false);
-  const [onSubmit, setSubmit] = useState("Login In");
+  const [onSubmit, setSubmit] = useState("Checking If you already signed in");
   const [isDisabled, setDisabled] = useState(true);
   useEffect(() => {
     CheckLogin().then((res) => {
       if (res) {
         setLogin(true);
       } else {
+        setSubmit("Login In");
         setDisabled(false);
       }
     });
