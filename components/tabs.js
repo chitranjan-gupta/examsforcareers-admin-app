@@ -7,7 +7,7 @@ import Admit from "./Admit";
 import Update from "./Update";
 import Message from "./Message";
 import Detail from "./Detail";
-
+import Category from "./Category";
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
@@ -40,6 +40,15 @@ const Tabs = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <Text style={{ color: color, fontSize: 30 }}>D</Text>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Category"
+        component={Category}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Text style={{ color: color, fontSize: 30 }}>C</Text>
           ),
         }}
       />
