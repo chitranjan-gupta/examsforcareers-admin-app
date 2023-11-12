@@ -1,3 +1,3 @@
 export default function Domain() {
-  return "https://examsforcareers.herokuapp.com";
+  return "https://examsforcareers.vercel.app";
 }

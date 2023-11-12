@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EXAMSFORCAREERS",
-    "slug": "examsforcareers",
+    "name": "examsforcareers-admin-app",
+    "slug": "examsforcareers-admin-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",

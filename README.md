@@ -1,1 +1,1 @@
-# examsforcareers-adminapp
+# examsforcareers-admin-app
